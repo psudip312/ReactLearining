@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ProductItem from './ProductItem';
+import { CartContext } from './CartContext';
 
 
 
@@ -9,7 +10,9 @@ const products = [
     { id: 3, name: 'Product 3', price: 30 },
   ];
   
-const ProductList = ({ addToCart }) => {
+const ProductList = () => {
+
+  const {addToCart} =useContext(CartContext)
   return (
     <div>
     <h2>Product List</h2>

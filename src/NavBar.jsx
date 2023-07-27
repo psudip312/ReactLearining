@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from './CartContext'
 
-const NavBar = ({cart}) => {
+const NavBar = () => {
+    const {cart}=useContext(CartContext)
   return (
     <div>
     <nav>
